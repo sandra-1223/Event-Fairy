@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dress</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel = "icon" href =  "images/icon.png"  type = "image/x-icon" sizes="16x16"> 
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["events"].value;
+  if (x == "") {
+    alert("Event must be filled out");
+    return false;
+  }
+
+  var x = document.forms["myForm"]["name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+
+  var x = document.forms["myForm"]["phone_number"].value;
+  if (x == "") {
+    alert("Phone Number must be filled out");
+    return false;
+  }
+
+   var x = document.forms["myForm"]["email"].value;
+  if (x == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+
+   var x = document.forms["myForm"]["delivery_date"].value;
+  if (x == "") {
+    alert("Delivery Date must be filled out");
+    return false;
+  }
+
+   var x = document.forms["myForm"]["delivery_slot"].value;
+  if (x == "") {
+    alert("Delivery Slot must be filled out");
+    return false;
+  }
+
+   var x = document.forms["myForm"]["message"].value;
+  if (x == "") {
+    alert("Message must be filled out");
+    return false;
+  }
+}
+</script>
+
+
+</head>
+<body>
+<script type="text/javascript">function show_alert() {
+  alert("Thank you for booking");
+}
+</script>
+<form action="demo_dress.php" method="POST">
+<div class="container">
+  <div style="text-align:center">
+    <h2>Dress</h2>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="images/dress.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      
+        <label for="Events">Events</label>
+        <select id="events" name="events" required>
+          <option selected hidden value="">Select Event</option>
+          <option value="Bride To Be">Bride To Be</option>
+          <option value="Engagement">Engagement</option>
+          <option value="Wedding">Wedding</option>
+          <option value="Baby Shower">Baby Shower</option>
+          <option value="Naming Ceremony">Naming Ceremony</option>
+          <option value="Birthday">Birthday</option>
+        </select>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" value="" oninput="allow_alphabets(this)" required >
+        <script>
+        function allow_alphabets(element){
+        let textInput = element.value;
+        textInput = textInput.replace(/[^A-Za-z ]*$/gm, ""); 
+        element.value = textInput;
+        }
+        </script>
+
+        <label for="phone_number">Phone Number</label>
+        <input type="text" id="phone_number" name="phone_number" value="" onblur="phonenumber(this);" required >
+        <script>
+         function phonenumber(inputtxt)
+         {
+           var phoneno = /^\d{10}$/;
+           if(inputtxt.value.match(phoneno))
+            {
+              return true;
+            }
+           else
+            {
+              alert("Invalid Phone Number");
+              return false;
+            }
+         }
+        </script>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" value="" onblur="validateEmail(this);" required >
+        <script>
+        function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(emailField.value) == false) 
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+
+        return true;
+
+}
+         </script>
+
+        <label for="delivery_date"> Delivery Date</label>
+        <br>
+         <input type="date" id="date" name="delivery_date" onchange="checkDate()" required class="date-input" type="date" data-date-format="yyyy-mm-dd" >
+<script type="text/javascript">
+   function checkDate() {
+   var selectedText = document.getElementById('date').value;
+   var selectedDate = new Date(selectedText);
+   var now = new Date();
+   if (selectedDate < now) {
+    alert("Date must be in the future");
+   }
+ }
+</script>
+        <br>
+        <br>
+        <label for="delivery_slot"> Delivery Slot</label>
+        <select id="delivery_slot" name="delivery_slot" required>
+          <option selected hidden value="">Select Delivery Slot</option>
+          <option value="7:00AM - 10:00AM">7:00AM - 10:00AM</option>
+          <option value="10:00AM - 2:00PM">10:00AM - 2:00PM</option>
+          <option value="2:00PM - 5:00PM">2:00PM - 5:00PM</option>
+          <option value="5:00PM - 8:00PM">5:00PM - 8:00PM</option>
+          <option value="8:00PM - 11:00PM">8:00PM - 11:00PM</option>
+          <option value="11:00PM - 12:00AM">11:00PM - 12:00AM</option>
+        </select>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Write something.." style="height:170px"></textarea> 
+      <input type="submit" name="save" value="Submit" onclick="show_alert(); onsubmit="return validateForm()">
+
+    </div>
+  </div>
+</div>
+</form>
+</body>
+</html>

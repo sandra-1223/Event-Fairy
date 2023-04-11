@@ -1,0 +1,155 @@
+<HTML>
+<HEAD>
+<TITLE>Services</TITLE>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel = "icon" href =  "images/icon.png"  type = "image/x-icon" sizes="16x16"> 
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+body {   margin: 0; }
+
+.topnav {   overflow: hidden;   background-color: black;   top: 0; }
+.topnav a {     color: white;   text-align: center;   padding: 14px 16px;   text-decoration: none;   font-size: 17px; }
+.topnav a:hover {     color: grey;     text-decoration: underline; }
+.topnav-right {   float: right; }
+
+.footer {    height: 140px;   width: 100%; left: 0; bottom: 0; text-align: center; background-color: black;  color: white;  }
+.footer a {  color: white; text-decoration: none; }
+.footer a:hover { 	color:grey;  	text-decoration: underline; }
+.gallery img {   
+	border: 5px solid white;   
+	border-radius: 15px;   
+}
+
+.zoom img { 
+	width: 100%; 
+	transition: 0.5s all ease-in-out;    
+}
+ 
+.zoom:hover img { 
+	transform: scale(1.2); 
+} 
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 10 10px;
+  margin-left:30px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h3 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#grad1 {
+  height: 30px;
+  background-image: linear-gradient(to right, red , yellow);
+}
+
+button  {
+  float: right;
+  
+  border: none;
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  padding: 10px 30px;
+}
+
+</style>
+</HEAD>
+
+<BODY>
+<!-- header -->
+<div class="topnav">
+	<a href="home.html"><img src="images/logo.png" alt="Trulli" width="300" height="100"></a>
+	<div class="topnav-right"><br><a href="home.html"><b>Home</a>
+  				      <a href="aboutus.html">About Us</a>
+  				      <a href="foodforall.html">Food for All</a>
+  				      <a href="services.html">Services</a>
+  				      <a href="gallery.html">Gallery</a>
+ 	  	   	 	      <a href="contact.html">Contact Us</a>
+  				      <a href="register.php" onclick="alert('Welcome to Event Fairy !')">Register</a>
+  				      <a href="login.php">Login</a>
+        </div>
+</div>
+
+<!-- gallery -->
+<div class="gallery">
+<center>
+	<H2> ------------- OUR SERVICES -------------</H2><hr><br>
+	<br>
+	<div class="row">
+  		<div class="column zoom"><div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>STAGE DECORATORS </h3></div><br>
+			<img src="images/s1.png" width="250" height="400"><br><br>
+                        <button class="button">View More</button></div>
+		<div class="column zoom"><div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>CATERING SERVICES </h3></div><br>
+			<img src="images/s2.png" width="250" height="400"><br><br>
+                        <button class="button">View More</button></div>
+		<div class="column zoom"><div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>PHOTOGRAPHERS </h3></div><br>
+			<img src="images/s3.png" width="250" height="400"><br><br>
+                        <button class="button">View More</button></div>
+		<div class="column zoom"><div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>BRIDAL MAKEUP </h3></div><br>
+			<img src="images/s4.png" width="250" height="400"><br><br>
+                        <button class="button">View More</button></div>
+		<div class="column zoom"><div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>INVITATION </h3></div><br>
+			<img src="images/s5.png" width="250" height="400"><br><br>
+                        <button class="button">View More</button></div>
+                <div class="column zoom"><div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>MEHENDI </h3></div><br>
+			<img src="images/s6.png" width="250" height="400"><br><br>
+                        <button class="button">View More</button></div>
+		<div class="column zoom"><div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>BALLOON DECORATIONS </h3></div><br>
+			<img src="images/s7.jpg" width="250" height="400"><br><br>
+                        <button class="button">View More</button></div>
+		<div class="column zoom"><div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>ANCHORING & HOSTING </h3></div><br>
+			<img src="images/s8.jpg" width="250" height="400"><br><br>
+                        <button class="button">View More</button></div>
+		<div class="column zoom"><div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>DJ </h3></div><br>
+			<img src="images/s9.png" width="250" height="400"><br><br>
+                        <button class="button">View More</button></div>
+		<div class="column zoom"><div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>SOUND & LIGHTING </h3></div><br>
+			<img src="images/s10.jpg" width="250" height="400"><br><br>
+                        <button class="button">View More</button></div>
+		<div class="column zoom"><div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>MAGIC SHOW </h3></div><br>
+			<img src="images/s11.jpg" width="250" height="400"><br><br>
+                        <button class="button">View More</button></div>
+		<div class="column zoom"><div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>FURNITURE RENTAL </h3></div><br>
+			<img src="images/s12.jpg" width="250" height="400"><br><br>
+                        <button class="button">View More</button></div>
+	</div>
+
+	<br><br>
+	
+	
+</center>
+</div>
+
+<!-- footer -->
+<div class="footer">
+	<div class="col-md-20 text-right">
+                   <p><small class="block">&copy; 2021 . All Rights Reserved.<br>
+                   <br>Designed by <br>
+                   <font color="grey">sandra.sony@science.christuniversity.in
+                   <span style="padding-left:50px">teena.tomy@science.christuniversity.in</span>
+                   <span style="padding-left:50px">sheryl.stephen@science.christuniversity.in</span></font>
+                   </small></p>
+        </div>
+</div>
+
+</body>
+</html>

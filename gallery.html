@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+<TITLE>Gallery</TITLE>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel = "icon" href =  "images/icon.png"  type = "image/x-icon" sizes="16x16"> 
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+body {   margin: 0; }
+
+.topnav {   overflow: hidden;   background-color: black;   top: 0; }
+.topnav a {     color: white;   text-align: center;   padding: 14px 16px;   text-decoration: none;   font-size: 17px; }
+.topnav a:hover {     color: grey;     text-decoration: underline; }
+.topnav-right {   float: right; }
+
+.footer {    height: 140px;   width: 100%; left: 0; bottom: 0; text-align: center; background-color: black;  color: white;  }
+.footer a {  color: white; text-decoration: none; }
+.footer a:hover { 	color:grey;  	text-decoration: underline; }
+.gallery img {   
+	border: 5px solid white;   
+	border-radius: 15px;     
+}
+
+.zoom img { 
+	width: 100%; 
+	transition: 0.5s all ease-in-out;    
+}
+ 
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h3 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#grad1 {
+  height: 30px;
+  background-image: linear-gradient(to right, red , yellow);
+}
+</style>
+</HEAD>
+
+<BODY>
+<!-- header -->
+<div class="topnav">
+	<a href="home.html"><img src="images/logo.png" alt="Trulli" width="300" height="100"></a>
+	<div class="topnav-right"><br><a href="home.html"><b>Home</a>
+  				      <a href="aboutus.html">About Us</a>
+  				      <a href="foodforall.html">Food for All</a>
+  				      <a href="services.html">Services</a>
+  				      <a href="gallery.html">Gallery</a>
+ 	  	   	 	      <a href="contact.html">Contact Us</a>
+  				      <a href="register.php" onclick="alert('Welcome to Event Fairy !')">Register</a>
+  				      <a href="login.php">Login</a>
+        </div>
+</div>
+
+
+<!-- gallery -->
+<div class="gallery">
+<center>
+	<H2> ------------- PHOTO GALLERY -------------</H2><hr><br>
+	<div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span>EVENT DECORATIONS </h3></div><br>
+	<div class="row">
+  		<div class="column zoom"><img src="images/d1.jpg" width="250" height="300"></div>
+  		<div class="column zoom"><img src="images/d2.jpg" width="250" height="300"></div>
+  		<div class="column zoom"><img src="images/d3.jpg" width="250" height="300"></div>
+  		<div class="column zoom"><img src="images/d4.jpg" width="250" height="300"></div>
+  		<div class="column zoom"><img src="images/d5.jpg" width="250" height="300"></div>
+  		<div class="column zoom"><img src="images/d6.jpg" width="250" height="300"></div>
+  		<div class="column zoom"><img src="images/d7.jpg" width="250" height="300"></div>
+  		<div class="column zoom"><img src="images/d8.jpg" width="250" height="300"></div>
+  		<div class="column zoom"><img src="images/d8.jpg" width="250" height="300"></div>
+	</div>
+
+	<br><br><hr><br>
+	
+	<div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span> TRENDING SURPRISE PACKAGES</h3></div><br>
+	<div class="gallery">
+  		<img src="images/g1.jpg" alt="Cinque Terre" width="400" height="300">
+  		<img src="images/g2.jpg" alt="Cinque Terre" width="400" height="300">
+  		<img src="images/g3.jpg" alt="Cinque Terre" width="400" height="300">
+  		<img src="images/g4.jpg" alt="Cinque Terre"  width="250" height="300">
+  		<img src="images/g5.jpg" alt="Cinque Terre"  width="250" height="300">
+  		<img src="images/g6.jpg" alt="Cinque Terre"  width="250" height="300">
+  		<img src="images/g7.jpg" alt="Cinque Terre"  width="250" height="300">
+  		<img src="images/g8.jpg" alt="Cinque Terre"  width="250" height="300">
+	</div>
+
+	<br><br><hr><br>
+
+	<div id="grad1"><h3 align="left"><span style="padding-left:20px">| </span> TRENDING CAKES</h3></div><br>
+	<div class="gallery">
+  		<img src="images/C1.jpg" alt="Cinque Terre" width="250" height="250">
+  		<img src="images/C2.jpg" alt="Cinque Terre" width="250" height="250">
+  		<img src="images/C3.jpg" alt="Cinque Terre" width="250" height="250">
+  		<img src="images/C4.jpg" alt="Cinque Terre" width="250" height="250">
+  		<img src="images/C5.jpg" alt="Cinque Terre" width="250" height="250">
+  		<div class="column zoom"><img src="images/C6.jpg" alt="Cinque Terre" width="200" height="400"></div>
+  		<div class="column zoom"><img src="images/C7.jpg" alt="Cinque Terre" width="200" height="400"></div>
+  		<div class="column zoom"><img src="images/C8.jpg" alt="Cinque Terre" width="200" height="400"></div>
+  		<img src="images/C9.jpg" alt="Cinque Terre" width="250" height="250">
+  		<img src="images/C12.jpg" alt="Cinque Terre" width="250" height="250">
+  		<img src="images/C11.jpg" alt="Cinque Terre" width="250" height="250">
+  		<img src="images/C10.jpeg" alt="Cinque Terre" width="250" height="250">
+  		<img src="images/C10.jpeg" alt="Cinque Terre" width="250" height="250">
+	</div>
+</center>
+</div>
+
+<!-- footer -->
+<div class="footer">
+	<div class="col-md-20 text-right">
+                   <p><small class="block">&copy; 2021 . All Rights Reserved.<br>
+                   <br>Designed by <br>
+                   <font color="grey">sandra.sony@science.christuniversity.in
+                   <span style="padding-left:50px">teena.tomy@science.christuniversity.in</span>
+                   <span style="padding-left:50px">sheryl.stephen@science.christuniversity.in</span></font>
+                   </small></p>
+        </div>
+</div>
+
+</body>
+</html>

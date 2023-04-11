@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel = "icon" href =  "images/icon.png"  type = "image/x-icon" sizes="16x16"> 
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+body {   margin: 0; }
+
+.topnav {   overflow: hidden;   background-color: black;   top: 0; }
+.topnav a {     color: white;   text-align: center;   padding: 14px 16px;   text-decoration: none;   font-size: 17px; }
+.topnav a:hover {     color: grey;     text-decoration: underline; }
+.topnav-right {   float: right; }
+
+.footer {    height: 140px;   width: 100%; left: 0; bottom: 0; text-align: center; background-color: black;  color: white;  }
+.footer a {  color: white; text-decoration: none; }
+.footer a:hover { 	color:grey;  	text-decoration: underline; }
+
+* {  box-sizing: border-box;}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+
+   var x = document.forms["myForm"]["email"].value;
+  if (x == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+
+   var x = document.forms["myForm"]["location"].value;
+  if (x == "") {
+    alert("Location must be filled out");
+    return false;
+  }
+
+   var x = document.forms["myForm"]["subject"].value;
+  if (x == "") {
+    alert("Subject must be filled out");
+    return false;
+  }
+}
+</script>
+
+</head>
+<body>
+
+<!-- header -->
+<div class="topnav">
+	<a href="home.html"><img src="images/logo.png" alt="Trulli" width="300" height="100"></a>
+	<div class="topnav-right"><br><a href="home.html"><b>Home</a>
+  				      <a href="aboutus.html">About Us</a>
+  				      <a href="foodforall.html">Food for All</a>
+  				      <a href="services.html">Services</a>
+  				      <a href="gallery.html">Gallery</a>
+ 	  	   	 	      <a href="contact.html">Contact Us</a>
+  				      <a href="register.php" onclick="alert('Welcome to Event Fairy !')">Register</a>
+  				      <a href="login.php">Login</a>
+        </div>
+</div>
+
+
+    <script type="text/javascript">function show_alert() 
+     {
+     alert("Thank you for contacting us");
+     }
+    </script>
+
+
+
+
+ <form action="demo_contact.php" method="POST">
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="images/EventHall.jpg" style="width:100%">
+    </div>
+    <div class="column">
+     
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" value="" oninput="allow_alphabets(this)"  required placeholder="Your name..">
+        <script>
+        function allow_alphabets(element){
+        let textInput = element.value;
+        textInput = textInput.replace(/[^A-Za-z ]*$/gm, ""); 
+        element.value = textInput;
+        }
+        </script>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" value="" onblur="validateEmail(this);" required placeholder="Your email..">
+        <script>
+        function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(emailField.value) == false) 
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+
+        return true;
+
+}
+         </script>
+
+
+        <label for="Location">Location</label>
+        <select id="location" name="location" required>
+          <option selected hidden value="">Select Location</option>
+          <option value="anekal">Anekal</option>
+          <option value="bannerghatta">Bannerghatta</option>
+          <option value="begur">Begur</option>
+          <option value="btm layout">BTM Layout</option>
+          <option value="chandapura">Chandapura</option>
+          <option value="electronic city">Electronic City</option>
+          <option value="hal">HAL</option>
+          <option value="hebbal">Hebbal</option>
+          <option value="hosur">Hosur</option>
+          <option value="hsr layout">HSR Layout</option>
+          <option value="indira nagar">Indira Nagar</option>
+          <option value="jalahalli">Jalahalli</option>
+          <option value="jayanagar">Jayanagar</option>
+          <option value="jp nagar">JP Nager</option>
+          <option value="kasavanahalli">Kasavanahalli</option>
+          <option value="kengeri">Kengeri</option>
+          <option value="koramangala">Koramangala</option>
+          <option value="kr puram">KR Puram</option>
+          <option value="malleshwaram">Malleshwaram</option>
+          <option value="marathalli">Marathalli</option>
+          <option value="rajaji nagar">Rajaji Nagar</option>
+          <option value="sarjapur">Sarjapur</option>
+          <option value="whitefield">Whitefield</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" required placeholder="Write something.." style="height:170px"></textarea> 
+
+      <input type="submit" name="save" value="Submit" onclick="show_alert(); onsubmit="return validateForm()">
+ 
+    </div>
+  </div>
+</div>
+</form>
+<!-- footer -->
+<div class="footer">
+	<div class="col-md-20 text-right">
+                   <p><small class="block">&copy; 2021 . All Rights Reserved.<br>
+                   <br>Designed by <br>
+                   <font color="grey">sandra.sony@science.christuniversity.in
+                   <span style="padding-left:50px">teena.tomy@science.christuniversity.in</span>
+                   <span style="padding-left:50px">sheryl.stephen@science.christuniversity.in</span></font>
+                   </small></p>
+        </div>
+</div>
+</body>
+</html>

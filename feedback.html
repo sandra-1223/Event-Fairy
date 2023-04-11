@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback Form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel = "icon" href =  "images/icon.png"  type = "image/x-icon" sizes="16x16"> 
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+body {   margin: 0; }
+
+.topnav {   overflow: hidden;   background-color: black;   top: 0; }
+.topnav a {     color: white;   text-align: center;   padding: 14px 16px;   text-decoration: none;   font-size: 17px; }
+.topnav a:hover {     color: grey;     text-decoration: underline; }
+.topnav-right {   float: right; }
+.footer {    height: 140px;   width: 100%; left: 0; bottom: 0; text-align: center; background-color: black;  color: white;  }
+.footer a {  color: white; text-decoration: none; }
+.footer a:hover { 	color:grey;  	text-decoration: underline; }
+* {  box-sizing: border-box;}
+
+input[type=text], select, textarea {  width: 100%;  padding: 12px;  border: 1px solid #34e8eb;  border-radius: 4px;  resize: vertical; }
+label {  padding: 12px 12px 12px 0;  display: inline-block; }
+body {  background-image: url('images/bg2.jpg');  background-position: center;  background-repeat: no-repeat;  background-size: cover; }
+input[type=submit] {  background-color: red;  color: white;  padding: 12px 20px;  border: none;  border-radius: 4px;  cursor: pointer;  float: right; }
+input[type=submit]:hover {  background-color: #f2f2f2; }
+.container {  border-radius: 2px;  background-color: #f2f2f2;  padding: 10px; }
+.col-25 {  float: left;  width: 20%;  margin-top: 6px; }
+.col-75 {  float: left;  width: 75%;  margin-top: 6px; }
+p {  font-size: 14px; }
+label {  font-size: 20px; }
+
+/* Clear floats after the columns */
+.row:after {  content: "";  display: table;  clear: both; }
+</style>
+</head>
+
+<body>
+<!-- header -->
+<div class="topnav">
+	<a href="home.html"><img src="images/logo.png" alt="Trulli" width="300" height="100"></a>
+	<div class="topnav-right"><br><a href="home.html"><b>Home</a>
+  				      <a href="aboutus.html">About Us</a>
+  				      <a href="foodforall.html">Food for All</a>
+  				      <a href="services.html">Services</a>
+  				      <a href="gallery.html">Gallery</a>
+ 	  	   	 	      <a href="contact.html">Contact Us</a>
+  				      <a href="register.php" onclick="alert('Welcome to Event Fairy !')">Register</a>
+  				      <a href="login.php">Login</a>
+        </div>
+</div>
+
+<form action="demo.php" method="post">
+<h1 style="text-align:center">Feedback Form</h1>
+<p><h4>Your feedback is an information to understand what you think about this website and our services. This is the only way to improve our services to you. Kindly fill out the short feedback form</h4></p>
+<form action="demo.php" method="post">
+<div class="container">
+  
+    <div class="row">
+      <div class="col-25">
+        <label for="fname"> Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="name" placeholder="Your name..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Feedback</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write your feedback.." style="height:170px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" name="save" value="Submit">
+    </div>
+  </form>
+</div>
+
+<!-- footer -->
+<div class="footer">
+	<div class="col-md-20 text-right">
+                   <p><small class="block">&copy; 2021 . All Rights Reserved.<br>
+                   <br>Designed by <br>
+                   <font color="grey">sandra.sony@science.christuniversity.in
+                   <span style="padding-left:50px">teena.tomy@science.christuniversity.in</span>
+                   <span style="padding-left:50px">sheryl.stephen@science.christuniversity.in</span></font>
+                   </small></p>
+        </div>
+</div>
+
+</body>
+</html>
